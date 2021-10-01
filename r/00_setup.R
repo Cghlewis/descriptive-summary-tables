@@ -1,7 +1,7 @@
 
 # Descriptives for project documentation
 
-# Step 1: Run the script for each time period in order (ex: 01_c1y1t1.R, 02_c1y1t2.R)
+# Step 1: Run the script for each time period in numerical order (ex: 01_c1y1t1.R, 02_c1y1t2.R)
     # a) If you are on a new time period that has not been created, then 
       # 1. Open 01_c1y1t1.R and change all instances of "C1Y1T1" to be the correct Cohort, Year, and Time Period
       # 2. Change the data import at the top of the student and teacher section to the correct data for the time period
