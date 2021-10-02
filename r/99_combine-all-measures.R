@@ -5,7 +5,8 @@ source("functions.R")
 # Make all time points per measure into a list --------------------------------------------------
 
 TocaConlist <- lapply(ls(pattern="TocaConProbC"), get) # 'get' gets the value of an object based on its name
-#lapply returns a list, sapply returns a vector
+# lapply returns a list, sapply returns a vector
+# ls names objects in the environment
 
 TocaDislist <- lapply(ls(pattern="TocaDisrBehC"), get)
 
@@ -30,7 +31,6 @@ TCompTotlist <- lapply(ls(pattern="CompTotC"), get)
 Efficlist <- lapply(ls(pattern="EfficC"), get)
 
 MBIlist <- lapply(ls(pattern="MBIC"), get)
-
 
 
 # Merge same measures across time --------------------------------------------------------
@@ -125,19 +125,14 @@ openxlsx::addStyle(wb, "S_Toca", rows=c(2:7, 17:22, 32:37, 47:52, 62:67, 77:82, 
 
 # TComp Styles
 
-sheet_names2 <- c("S_TComp")
+openxlsx::addStyle(wb, "S_TComp", rows = c(8:12, 23:27, 38:42, 53:57),
+                   cols= 1:20, style=style2, gridExpand = T)
 
-purrr::walk2(sheet_names2, 1, ~openxlsx::addStyle(wb, .x, 
-                                                  rows = c(8:12, 23:27, 38:42, 53:57),
-                                                  cols= 1:20, style=style2, gridExpand = T))
+openxlsx::addStyle(wb, "S_TComp", rows = c(13:14, 28:29, 43:44, 58:59),
+                   cols= 1:20, style=style1, gridExpand = T)
 
-purrr::walk2(sheet_names2, 1, ~openxlsx::addStyle(wb, .x, 
-                                                  rows = c(13:14, 28:29, 43:44, 58:59),
-                                                  cols= 1:20, style=style1, gridExpand = T))
-
-purrr::walk2(sheet_names2, 1, ~openxlsx::addStyle(wb, .x, 
-                                                  rows=c(2:7, 17:22, 32:37, 47:52),
-                                                  cols=1:20, style=style3, gridExpand = T))
+openxlsx::addStyle(wb, "S_TComp", rows=c(2:7, 17:22, 32:37, 47:52),
+                   cols=1:20, style=style3, gridExpand = T)
 
 
 
