@@ -5,7 +5,7 @@ source("functions.R")
 # Make all time points per measure into a list --------------------------------------------------
 
 TocaConlist <- lapply(ls(pattern="TocaConProbC"), get) # 'get' gets the value of an object based on its name
-# lapply returns a list, sapply returns a vector
+# lapply returns a list
 # ls names objects in the environment
 
 TocaDislist <- lapply(ls(pattern="TocaDisrBehC"), get)
