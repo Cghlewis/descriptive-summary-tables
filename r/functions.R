@@ -42,7 +42,7 @@ fAlpha <- function (measuredf) {
     mutate(Stat = "alpha")
 }
 
-# Create a data frame of descriptives of sum and mean scores for a measure
+# Create a data frame of descriptives of sum and mean scores for a measure (describe default is na.rm = TRUE)
 
 fDescriptives <- function (sum, mean) {
 
